@@ -1,5 +1,5 @@
 #include<stdio.h>
-int array[7],i, newA rray[7],N;
+int i,j,newArray[7],N;
 
 int main()
 {
@@ -9,7 +9,13 @@ int main()
     {
         for(i=0;i<7;i++)
         {
-            printf("%d\n",(N/array[i]));
+            N=N/array[7];
+            newArray[7]=N%array[7];
+        }
+        for(j=0;j<7;++j)
+        {
+            printf("%d nota(s) de R$ %d",array[7],newArray[7] );
         }
     }
+    return 0;
 }
