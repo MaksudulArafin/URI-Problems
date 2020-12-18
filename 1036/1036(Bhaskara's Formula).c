@@ -15,7 +15,7 @@ int main()
     }
     else
     {
-        printf("Impossivel calcular");
+        printf("Impossivel calcular\n");
     }
     return 0;
 }
