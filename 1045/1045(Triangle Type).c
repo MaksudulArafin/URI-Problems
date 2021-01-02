@@ -1,76 +1,68 @@
-#include <stdio.h>
+#include<stdio.h>
+void first_four();
+void secound_two();
+void biggest();
+double A,B,C,temp;
+
 
 int main()
-
 {
+    scanf("%lf%lf%lf",&A,&B,&C);
+    biggest();
+    //first_four();
+    secound_two();
+    return 0;
+}
 
-    double a, b, c, temp;
-
-    scanf("%lf %lf %lf", &a, &b, &c);
-
-if(a>0 && b>0 && c>0)
+void first_four()
 {
-    if (a < b)
-
-    {
-        temp = a;
-        a = b;
-        b = temp;
-    }
-
-    if (b < c)
-
-    {
-        temp = b;
-        b = c;
-        c = temp;
-    }
-
-    if (a < b)
-    {
-        temp = a;
-        a = b;
-        b = temp;
-    }
-
-    if (a >= b + c)
-
+    if(A >= B+C)
     {
         printf("NAO FORMA TRIANGULO\n");
     }
-
-    else if (a * a == b * b + c * c)
-
+    else if((A*A) == (B*B+C*C))
     {
         printf("TRIANGULO RETANGULO\n");
     }
-
-    else if (a * a > b * b + c * c)
-
+    else if((A*A) > (B*B+C*C))
     {
         printf("TRIANGULO OBTUSANGULO\n");
     }
-
-    else if (a * a < b * b + c * c)
-
+    else if((A*A) < (B*B+C*C))
     {
         printf("TRIANGULO ACUTANGULO\n");
     }
-
-
-
-    if (a == b && b == c)
-
-    {
-        printf("TRIANGULO EQUILATERO\n");
-    }
-
-    else if (a == b || b == c || c == a)
-
-    {
-        printf("TRIANGULO ISOSCELES\n");
-    }
 }
-    return 0;
 
+void secound_two()
+{
+    if(A == B && B == C)
+        printf("TRIANGULO EQUILATERO\n");
+    else if(((A==B) || (C==A)) ^ (A==B && B==C))
+        printf("TRIANGULO ISOSCELES\n");
+    else if(((A==B) || (B==C)) ^ (A==B && B==C))
+        printf("TRIANGULO ISOSCELES\n");
+}
+
+void biggest()
+{
+    if(A<B)
+    {
+        temp = A;
+        A=B;
+        B=temp;
+    }
+    if(B<C)
+    {
+        temp=B;
+        B=C;
+        C=temp;
+    }
+    if(A<B)
+    {
+        temp = A;
+        A=B;
+        B=temp;
+    }
+    first_four();
 }
