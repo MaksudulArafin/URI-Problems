@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 void compare(int x, int y, int a, int b, int c);
 
